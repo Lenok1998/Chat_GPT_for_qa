@@ -18,7 +18,7 @@ public class BurgerTest {
 
     @Test
     public void testCreateBurger() {
-        // Подготовка данных для создания бургера
+        // Подготовка данных для создания бургера в системе
         String[] ingredients = {"lettuce", "cheese", "tomato"};
         BurgerRequest burgerRequest = new BurgerRequest("Stellar Burger", ingredients);
 
