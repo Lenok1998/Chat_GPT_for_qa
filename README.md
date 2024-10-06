@@ -1,6 +1,6 @@
 # Stellar Burgers
 
-![Stellar Burgers](https://stellarburgers.nomoreparties.site/logo.png)
+![Stellar Burgers](logo.jpeg)
 
 ## Описание проекта
 
