@@ -1,34 +1,54 @@
 plugins {
     id 'java'
+    id 'io.qameta.allure' version '2.12.0'
 }
 
-group 'com.stellarburgers'
-version '1.0-SNAPSHOT'
-
-sourceCompatibility = '11'
+version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'org.projectlombok:lombok:1.18.30'
+    // Allure + Junit
+    implementation "io.qameta.allure:allure-junit5:2.21.0"
+    implementation "io.qameta.allure:allure-rest-assured:2.21.0"
+
+    // Junit
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:5.9.1"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.9.1"
+
+    // Selenide
+    implementation "com.codeborne:selenide:6.19.1"
+
+    // Lombok
+    implementation "org.projectlombok:lombok:1.18.26"
+    annotationProcessor "org.projectlombok:lombok:1.18.26"
+
+    // JavaFaker
+    implementation "com.github.javafaker:javafaker:1.0.2"
 
     // Rest-Assured
-    testImplementation 'io.rest-assured:rest-assured:5.0.1'
-    // Lombok
-    dependencies {
-        // Lombok
-        compileOnly 'org.projectlombok:lombok:1.18.24'
-        annotationProcessor 'org.projectlombok:lombok:1.18.24'
-    }
+    implementation "io.rest-assured:rest-assured:4.5.1"
 
-    // JUnit 5
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
-    // JSON library
-    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
+    // Jackson Databind
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.15.1"
+
+    // AspectJ Weaver
+    testImplementation "org.aspectj:aspectjweaver:1.9.19"
 }
 
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
+    systemProperty "allure.results.directory", "$buildDir/allure-results"
+    jvmArgs "-javaagent:${configurations.testRuntimeClasspath.find { it.name.contains('aspectjweaver') }}"
+}
+
+allure {
+    version = '2.21.0'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
