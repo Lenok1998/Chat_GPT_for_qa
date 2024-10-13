@@ -4,7 +4,7 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 import service.APIServices;
 import com.github.javafaker.Faker;
-import model.UserAccount;
+import model. UserAccount;
 import pages.AppHeaderPage;
 import pages.MainPage;
 import pages.PasswordRecoveryPage;
