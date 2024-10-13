@@ -21,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Feature("Профиль")
 @Story("Переходы и взаимодействия в профиле")
 @Owner("Lenok1998")
+@Link(name = "HOMEWORK-1360 ChatGPT_03_MalyshevaES", type = "issue", url = "https://jira.autotests.cloud/browse/HOMEWORK-1360")
 @Tag("automated")
 public class ProfileTest extends WebDriverParams {
     private final Faker faker = new Faker(new Locale("en"));
