@@ -30,12 +30,15 @@ public class LoginTest extends WebDriverParams {
 
     @BeforeEach
     public void setUp() {
+        setName(faker.name().firstName());
         account = new UserAccount().
                 setEmail(faker.internet().emailAddress()).
-                setPassword(faker.internet().password()).
-                setName(faker.name().firstName());
+                setPassword(faker.internet().password());
         testData.add(account);
         apiServices.createAccount(account);
+    }
+
+    private void setName(String s) {
     }
 
     @AfterEach
