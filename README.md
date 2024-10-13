@@ -116,9 +116,9 @@ gradle build
 
 ## Скриншоты
 
-![Главная страница](https://stellarburgers.nomoreparties.site/screenshots/home.png)
+![Главная страница](home.jpeg)
 
-![Страница заказа](https://stellarburgers.nomoreparties.site/screenshots/order.png)
+![Страница заказа](order.jpeg)
 
 ## Контрибьютинг
 
