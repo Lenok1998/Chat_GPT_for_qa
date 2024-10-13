@@ -15,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Epic("Тесты конструктора")
 @Feature("Конструктор")
 @Story("Переходы к разделам")
+@Link(name = "HOMEWORK-1360 ChatGPT_03_MalyshevaES", type = "issue", url = "https://jira.autotests.cloud/browse/HOMEWORK-1360")
 @Owner("Lenok1998")
 public class BuilderSectionsTest extends WebDriverParams {
     @Test
