@@ -18,7 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Owner("Lenok1998")
 public class BuilderSectionsTest extends WebDriverParams {
     @Test
-    @Disabled
     @Severity(SeverityLevel.CRITICAL)
     @Description("Описание теста: Работают переходы к разделам - Булки, Соусы, Начинки")
     @DisplayName("Раздел 'Конструктор'. Работают переходы к разделам - Булки, Соусы, Начинки")

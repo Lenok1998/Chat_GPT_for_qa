@@ -29,15 +29,6 @@ public class RegistrationTest extends WebDriverParams {
     private final List<UserAccount> testData = new ArrayList<>();
     private UserAccount account;
 
-    @BeforeEach
-    public void setUp() {
-        account = new UserAccount().
-                setEmail(faker.internet().emailAddress()).
-                setPassword(faker.internet().password()).
-                setName(faker.name().firstName());
-        testData.add(account);
-        apiServices.createAccount(account);
-    }
 
     @AfterEach
     public void cleanUp() {
