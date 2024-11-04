@@ -4,7 +4,7 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 import service.APIServices;
 import com.github.javafaker.Faker;
-import model. UserAccount;
+import model.UserAccount;
 import pages.AppHeaderPage;
 import pages.MainPage;
 import pages.PasswordRecoveryPage;
@@ -32,11 +32,16 @@ public class LoginTest extends WebDriverParams {
     @BeforeEach
     public void setUp() {
         setName(faker.name().firstName());
-        account = new UserAccount().
-                setEmail(faker.internet().emailAddress()).
-                setPassword(faker.internet().password());
-        testData.add(account);
-        apiServices.createAccount(account);
+        // Создаем экземпляр UserAccount
+        UserAccount account = new UserAccount();
+
+        // Устанавливаем имя с помощью Faker
+        String generatedName = faker.name().name();
+        account.setName(generatedName);
+        String generatedEmail = faker.internet().emailAddress();
+        account.setEmail(generatedEmail);
+        String generatedPassword = faker.internet().password();
+        account.setPassword(generatedPassword);
     }
 
     private void setName(String s) {

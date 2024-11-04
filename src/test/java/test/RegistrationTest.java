@@ -31,14 +31,13 @@ public class RegistrationTest extends WebDriverParams {
 
     @BeforeEach
     public void setUp() {
-        account = new UserAccount().
-                setEmail(faker.internet().emailAddress()).
-                setPassword(faker.internet().password()).
-                setName(faker.name().firstName());
+        account = new UserAccount();
+        account.setEmail(faker.internet().emailAddress());
+        account.setPassword(faker.internet().password());
+        account.setName(faker.name().firstName());
         testData.add(account);
         apiServices.createAccount(account);
     }
-
     @AfterEach
     public void cleanUp() {
         apiServices.deleteAccounts(testData);

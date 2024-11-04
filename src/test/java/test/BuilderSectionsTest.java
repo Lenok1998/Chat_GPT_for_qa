@@ -6,7 +6,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
-import test.WebDriverParams;
 
 import static io.qameta.allure.Allure.step;
 import static com.codeborne.selenide.Selenide.open;
@@ -19,7 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Owner("Lenok1998")
 public class BuilderSectionsTest extends WebDriverParams {
     @Test
-    @Disabled
     @Severity(SeverityLevel.CRITICAL)
     @Description("Описание теста: Работают переходы к разделам - Булки, Соусы, Начинки")
     @DisplayName("Раздел 'Конструктор'. Работают переходы к разделам - Булки, Соусы, Начинки")
