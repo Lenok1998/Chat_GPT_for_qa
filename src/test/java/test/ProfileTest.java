@@ -29,6 +29,14 @@ public class ProfileTest extends WebDriverParams {
     private final List<UserAccount> testData = new ArrayList<>();
     private UserAccount account;
 
+    @BeforeEach
+    public void setUp() {
+        account = new UserAccount();
+        account.setEmail(faker.internet().emailAddress());
+        account.setPassword(faker.internet().password());
+        testData.add(account);
+        apiServices.createAccount(account);
+    }
 
 
 
