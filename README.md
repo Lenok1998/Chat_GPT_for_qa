@@ -1,6 +1,6 @@
 # Проект по автоматизации тестирования для проекта с открытым исходным кодом [Stellar Burgers](https://stellarburgers.nomoreparties.site/) 
 
-![StellarBurgers](media/screen/sibintek.png "Главная страница")
+![StellarBurgers](media/logo/logo.jpeg")
 
 <p>Одностраничное приложение Stellar Burger разработано в рамках интенсива "React-разработчик" Факультета Веб-разработки Yandex. Praktikum и представляет собой фантазийное приложение бургерной с возможность оформления онлайн-заказа.
 
